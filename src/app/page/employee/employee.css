@@ -1,0 +1,144 @@
+/* ===========================
+   Layout
+=========================== */
+.employee-container {
+  padding: 20px;
+  background: #f9fafc;
+  border-radius: 8px;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.header-section h2 {
+  font-weight: 700;
+  color: #2a3f5f;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-add {
+  background: #28a745;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background: #218838;
+}
+
+/* Save */
+.btn-save {
+  background: #007bff;
+  font-weight: 600;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-save:hover {
+  background: #0056b3;
+}
+
+/* Cancel */
+.btn-cancel {
+  background: #6c757d;
+  font-weight: 600;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-cancel:hover {
+  background: #545b62;
+}
+
+/* Delete */
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-delete:hover {
+  background: #bd2130;
+}
+
+/* ===========================
+   Form Card
+=========================== */
+.emp-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  border-left: 5px solid #007bff;
+}
+
+/* ===========================
+   Table Styling
+=========================== */
+
+.custom-table thead {
+  background: #e9eef5;
+  color: #2a3f5f;
+  font-weight: 600;
+}
+
+.custom-table tbody tr:hover {
+  background: #f2f7ff;
+  cursor: pointer;
+}
+
+/* Department tags */
+.dept-tag {
+  background: #19a974;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.dept-sub {
+  background: #ffd34e;
+  color: #212529;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media(max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+}

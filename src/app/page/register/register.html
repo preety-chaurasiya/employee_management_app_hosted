@@ -1,0 +1,54 @@
+<div class="auth-container">
+
+  <div class="auth-card">
+
+    <h2 class="auth-title">Create Your Account</h2>
+
+    <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+
+      <p class="error-msg">{{ errorMsg }}</p>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          [(ngModel)]="email"
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          required
+          minlength="6"
+          [(ngModel)]="password"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          required
+          [(ngModel)]="confirmPassword"
+          placeholder="Confirm password"
+        />
+      </div>
+
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+
+    <button routerLink="/login" class="btn-secondary">
+      Back to Login
+    </button>
+
+  </div>
+
+</div>

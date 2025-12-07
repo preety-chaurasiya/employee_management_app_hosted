@@ -1,0 +1,67 @@
+<div class="container">
+
+  <!-- LEFT TABLE -->
+  <div class="left">
+    <h2 class="header">Project Employee List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Emp Project ID</th>
+          <th>Project ID</th>
+          <th>Employee ID</th>
+          <th>Assigned Date</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of projectEmployees">
+          <td>{{ p.empProjectId }}</td>
+          <td>{{ p.projectId }}</td>
+          <td>{{ p.employeeId }}</td>
+          <td>{{ p.assignedDate }}</td>
+          <td>{{ p.role }}</td>
+          <td>
+            <button class="btn-edit" (click)="edit(p.empProjectId)">Edit</button>
+            <button class="btn-delete" (click)="delete(p.empProjectId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="right">
+
+    <h2 class="header">Add New Project Employee</h2>
+
+    <form #f="ngForm" (ngSubmit)="submitForm(f)">
+
+      <label>Project ID</label>
+      <select [(ngModel)]="formData.projectId" name="projectId" required>
+        <option value="">Select</option>
+        <option value="1">1</option>
+      </select>
+
+      <label>Employee ID</label>
+      <select [(ngModel)]="formData.employeeId" name="employeeId" required>
+        <option value="">Select</option>
+        <option value="2">2</option>
+      </select>
+
+      <label>Assigned Date</label>
+      <input type="date" [(ngModel)]="formData.assignedDate" name="assignedDate" required />
+
+      <label>Role</label>
+      <input type="text" placeholder="Enter role" [(ngModel)]="formData.role" name="role" required />
+
+      <button type="submit" class="btn-submit">Submit</button>
+
+    </form>
+
+  </div>
+
+</div>
