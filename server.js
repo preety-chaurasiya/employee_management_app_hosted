@@ -7,6 +7,7 @@ const app = express();
 // ============ MIDDLEWARE ============
 app.use(cors());
 app.use(express.json());
+const PORT =   3000;
 
 // ============ MONGODB CONNECTION ============
 mongoose
@@ -309,4 +310,9 @@ app.get('/api/dashboard/counts', async (req, res) => {
 
 // ====================== EXPORT APP FOR VERCEL ======================
 // ❌ NO app.listen() here
+
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
 export default app;

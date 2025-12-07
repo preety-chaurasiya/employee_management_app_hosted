@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "node server.js",                      
     "build": "ng build --configuration production", 
-    "vercel-build": "npm run build",               
+    "vercel-build": "npm run build",
+    "type": "module",               
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

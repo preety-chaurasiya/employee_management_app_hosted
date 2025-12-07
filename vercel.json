@@ -1,17 +1,11 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/Employee-App/**",
-      "use": "@vercel/static"
-    }
+    { "src": "angular.json", "use": "@vercel/static-build", "config": { "distDir": "dist/Employee-App" } },
+    { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/server.js" },
-    { "src": "/(.*)", "dest": "/dist/Employee-App/$1" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
